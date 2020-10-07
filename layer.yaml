@@ -1,0 +1,10 @@
+includes:
+  - layer:basic
+  - layer:snap
+options:
+  basic:
+    use_venv: false
+  snap:
+    microk8s:
+      classic: true
+      

@@ -1,0 +1,16 @@
+name: microk8s-cluster
+summary: Microk8s Clustering Charm
+maintainer: Craig Bender <craig.bender@canonical.com>
+description: |
+  Create and scale a microk8s cluster on bare metal, public clouds, IoT and Edge.
+tags:
+  - containers
+  - infrastructure
+subordinate: false
+peers:
+  cluster:
+    interface: microk8s-cluster
+series: ['bionic', 'focal', 'groovy']
+storage:
+  local:
+    type: block

@@ -1,0 +1,9 @@
+microk8s-cmd:
+  description: "Execute microk8s command (microk8s.<command>)"
+  params:
+    command:
+      description: "The command to execute"
+      type: string
+      default: ""
+  required:
+  - command
