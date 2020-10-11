@@ -1,14 +1,27 @@
+# Copyright 2020 craig.bender@canonical.com
+# See LICENSE file for licensing details.
+#
+# This is only an example, and you should edit to suit your needs.
+# If you don't need config, you can remove the file entirely.
 options:
-  string-option:
+  channel:
     type: string
-    default: "Default Value"
-    description: "A short description of the configuration option"
-  boolean-option:
-    type: boolean
-    default: False
-    description: "A short description of the configuration option"
-  int-option:
+    default: 1.19/stable
+    description:  |
+      snap channel from which to install microk8s from
+        - Recommended: 1.19 or later
+        - Suported: 1.16 or later
+  token-ttl:
     type: int
-    default: 9001
-    description: "A short description of the configuration option"
-
+    default: 900
+    description:  |
+      Time-To-Live of the cluster token
+  snapd_refresh:
+    default: mon,23:00-01:00
+    type: string
+    description: >
+      How often snapd handles updates for installed snaps.
+      The default (23:00-01:00) every Monday, from 23:00 to 1:00 the next day.
+      Set to "max" to check once per month based on the charm deployment date.
+      You may also set a custom string as described in the 'refresh.timer'
+      section here: https://forum.snapcraft.io/t/system-options/87

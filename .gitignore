@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log files
+*.log
+.last*
+
+.tox/
+.coverage*
+htmlcov
+cover/*
+.stestr/*
+
+# vi
+.*.swp
+
+# pycharm
+.idea/
+
+#visual studio code
+.history
+
+# version data
+repo-info
+
+# reports
+report/*
+
+# virtual env
+env
+
+# build folder
+build
+.build
+microk8s-cluster
+charm.egg-info

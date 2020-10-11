@@ -1,16 +1,32 @@
+# Copyright 2020 craig.bender@canonical.com
+# See LICENSE file for licensing details.
 name: microk8s-cluster
 summary: Microk8s Clustering Charm
 maintainer: Craig Bender <craig.bender@canonical.com>
 description: |
-  Create and scale a microk8s cluster on bare metal, public clouds, IoT and Edge.
+  MicroK8s-Cluster is the fastest way to deploy the world’s most efficient multi-cloud,
+  multi-arch Kubernetes distro, MicroK8s
+  With 'just works' defaults, zero config, easy upgrades and great
+  security, MicroK8s is fastest way to deploy Kubernetes on everything
+  from Developer Edition Dell Laptop to any node in your Data Center.
 tags:
   - containers
   - infrastructure
-subordinate: false
-peers:
-  cluster:
-    interface: microk8s-cluster
-series: ['bionic', 'focal', 'groovy']
+  - kubernetes
+  - microk8s
+series: ['xenial', 'bionic', 'focal', 'groovy']
 storage:
   local:
     type: block
+resources:
+  core:
+    type: file
+    filename: core.snap
+    description: core snap
+  microk8s:
+    type: file
+    filename: microk8s.snap
+    description: microk8s snap
+subordinate: false
+
+
