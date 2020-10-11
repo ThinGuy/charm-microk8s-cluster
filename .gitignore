@@ -29,7 +29,7 @@ repo-info
 report/*
 
 # virtual env
-env
+venv
 
 # build folder
 build
