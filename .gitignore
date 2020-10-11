@@ -34,5 +34,5 @@ venv
 # build folder
 build
 .build
-microk8s-cluster
+microk8s-cluster.charm
 charm.egg-info
