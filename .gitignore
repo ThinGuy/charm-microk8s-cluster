@@ -30,6 +30,7 @@ report/*
 
 # virtual env
 venv
+env
 
 # build folder
 build
